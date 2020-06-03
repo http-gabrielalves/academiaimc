@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Landing Page</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul class="nav-links">
+					<li><a class="nav-link" href="#">Sobre nós</a></li>
+					<li><a class="nav-link" href="#">Planos</a></li>
+					<li><a class="nav-link" href="#">Contato</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="presentation">
+				<div class="introduction">
+					<div class="intro-text">
+						<h1>Mude sua vida</h1>
+						<p>
+							Use nossa calculadora e escolha o melhor plano para atingir seu objetivo.
+						</p>
+					</div>
+					<div class="cta">
+						<a class="cta-select" href="#box">Calcular IMC</a>
+					</div>
+				</div>
+				<div class="cover">
+					<img src="./img/pngwig.png" alt="homem" />
+				</div>
+			</section>
+
+			<img class="big-circle" src="./img/big-eclipse.svg" alt="" />
+			<img class="medium-circle" src="./img/mid-eclipse.svg" alt="" />
+			<img class="small-circle" src="./img/mid-eclipse.svg" alt="" />
+		</main>
+
+		<div class="calculadora">
+			<div class="box" id="box">
+			<h1>Calculadora de IMC</h1>
+			<p>Sua altura: <input type="text" id="height" placeholder="Digite aqui"/>
+				<select type="multiple" id="heightunits">
+					<option value="metres" selected="selected">Cm</option>
+					<option value="inches">In</option>
+				</select>
+				 </p>
+			<p>Seu peso: <input type="text" id="weight" placeholder="Digite aqui"/>
+				<select type="multiple" id="weightunits">
+					<option value="kg" selected="selected">KG</option>
+					<option value="lb">LB</option>
+				</select>
+			</p>
+			<input type="submit" value="CALCULAR" onclick="computeBMI();">
+			<h1>Seu IMC é: <span id="output">?</span></h1>
+			
+			<h2>Signifíca que você está: <span id="comment"> ?</span> </h2> 
+			</div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
